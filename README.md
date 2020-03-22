@@ -37,6 +37,7 @@ If you change the column names in the spreadsheet, you need to customize `contro
 ## Setup heroku
 
 ⚠️ 2DO: Use "EU" --region=region? https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-apps-create-app
+`heroku apps:create --region eu`
 
 Steps needed before:
 
