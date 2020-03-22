@@ -82,9 +82,7 @@ class Appbase {
 
 	} // eo flush_index
 
-	public function publish_to_index($index, $sanitized_object_array, $user_id=null, $imgur_url=null, $imgur_delete_hash=null, $time=null) {
-
-		log_message('debug', "Publish to index ".$index." start");
+	public function publish_to_index($sanitized_object_array, $user_id=null, $imgur_url=null, $imgur_delete_hash=null, $time=null) {
 
 		$curl = curl_init();
 
@@ -97,7 +95,14 @@ class Appbase {
 
 		$this->CI->config->load('appbase');
 
-		switch ($index) {
+		// 2DO: no good dev style to use config values here directly, i know ;-)
+
+		// the full url for curl requests, e.g.:
+		// https://scalr.api.appbase.io/coronacampus-test
+		$appbase_api_url = $this->CI->config->item('appbase_api_url').'/'.$this->CI->config->item('appbase_app_name');
+		$appbase_auth_string = $this->CI->config->item('appbase_auth_string_write');
+
+		/*switch ($index) {
 		case 'coronacampus':
 		case 'coronacampus-test':
 			$appbase_auth_string = $this->CI->config->item('appbase_auth_string_write_' . $index);
@@ -106,7 +111,7 @@ class Appbase {
 		default:
 			show_error('Unexpected appbase index value', 500);
 			break;
-		}
+		}*/
 
 		// add oerhoernchen_id to new entry object
 		// don't do it for coronacampus
@@ -114,7 +119,7 @@ class Appbase {
 		$oerhoernchen_id = uniqid(rand(), true);
 		$sanitized_object_data->oerhoernchen_id = $oerhoernchen_id;*/
 
-		log_message('debug', 'Try to publish to index ' . $index);
+		log_message('debug', 'Try to publish to index ...');
 		log_message('debug', 'URL: ' . $appbase_api_url);
 		log_message('debug', 'Appbase auth string has length: ' . strlen($appbase_auth_string));
 
