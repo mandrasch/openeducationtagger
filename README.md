@@ -1,5 +1,5 @@
 
-⚠️ Work in progress ⚠️
+⚠️ Work in progress, documentation will be updated in the next days ⚠️
 
 
 # OpenEducationTagger
@@ -37,11 +37,11 @@ Steps needed before:
 
 (Note for bonsai.io: You need to manually create an index and append it to the url, auto-index is disabled + no read-only API keys available in bonsai free)
 
-Steps for installation of sync worker (spreadsheet >>> appbase-index)
+Steps for installation of sync worker (spreadsheet >>> elasticsearch index)
 
 1. Fork this repo
 2. Set it up locally
-3. Create heroku app with `heroku create` (This will add a git:remote source)
+3. Create heroku app with `heroku create` (This will add a git:remote source) / or if it already exists `heroku git:remote -a APPNAME`
 4. Add config values to heroku.com dashboard
 5. Add .env config values for local testing
 4. Test locally with `heroku local worker`
