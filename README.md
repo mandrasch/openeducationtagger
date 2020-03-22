@@ -36,6 +36,16 @@ Curl response stdClass Object
  )
 ```
 
+## Scheduler
+
+`heroku addons:create scheduler:standard`
+
+Test command:
+`php worker/index.php coronacampus/cli syncdatafromworksheet`
+
+`heroku addons:open scheduler`
+
+Create job with the above command
 
 
 ## Test locally
