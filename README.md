@@ -112,7 +112,12 @@ After this `heroku local worker` should output:
 `[OKAY] Loaded ENV .env File as KEY=VALUE Format`
 
 
+https://www.fomfus.com/articles/how-to-set-heroku-environmental-variables-from-dotenv-env-files
 
+```
+sed 's/#[^("|'')]*$//;s/^#.*$//' .env | \
+  xargs heroku config:set
+```
 
 
 ## Personal Notes

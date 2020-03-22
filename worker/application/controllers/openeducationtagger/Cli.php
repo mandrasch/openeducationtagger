@@ -38,10 +38,11 @@ class Cli extends CI_Controller
     public function syncdatafromworksheet()
     {
 
-        $this->load->config('elasticsearch');
-        $this->load->library('coronacampus/elasticsearch');
+        $this->load->config('openeducationtagger');
+        $this->load->library('openeducationtagger/elasticsearchapi');
 
-				$worksheetUrl = $this->config->item('worksheet_url_json');
+        // https://coderwall.com/p/duapqq/use-a-google-spreadsheet-as-your-json-backend
+				$spreadsheetUrl = $this->config->item('openeducationtagger_spreadsheet_sheet_url_json');
 
         // publish to production removed by now, just set other values in config/appbase.php if you want to use a test instance
         /*if (!$publishToProduction) {
@@ -51,17 +52,21 @@ class Cli extends CI_Controller
             $appbaseIndex = "coronacampus";
         }*/
 
+        if($spreadsheetUrl == ''){
+          show_error('Spreadsheet URL was not set, please set it via heroku config, e.g. for local testing in .env');
+        }
+
         custom_log_message("Start loadspreadsheet");
 
 				// $spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1kntJWO9iP6rL6WFqKXNsINoa923LjoDfEz38_NA4-ao/od6/public/values?alt=json';
-        custom_log_message("Curling url: ".print_r($worksheetUrl,true));
+        custom_log_message("Curling url: ".print_r($spreadsheetUrl,true));
 
         $ch = curl_init();
         $timeout = 30;
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-        curl_setopt($ch, CURLOPT_URL, $worksheetUrl);
+        curl_setopt($ch, CURLOPT_URL, $spreadsheetUrl);
 
         // Get URL content
         $response = curl_exec($ch);
@@ -85,45 +90,32 @@ class Cli extends CI_Controller
 
           // 2DO: SANITIZE filter_var($projectkey, FILTER_SANITIZE_STRING);
 
-					custom_log_message("Entry: ".$entry['gsx$titel']['$t']);
+					//custom_log_message("Entry: ".$entry['gsx$title']['$t']);
 
           // 2DO: define fields which can have multiple values (comma separated)
-          $fields_single = array(
-            'Titel' => $entry['gsx$titel']['$t'],
-            'url' => $entry['gsx$url']['$t'],
-            'beschreibung'=>$entry['gsx$beschreibung']['$t'],
-            'jahr'=>$entry['gsx$jahroptional']['$t']
-          );
 
-          $fields_multiple = array(
-            'fachgebiet'=> $entry['gsx$fachgebiet']['$t'],
-            'art'=>$entry['gsx$art']['$t'],
-            'tags'=>$entry['gsx$tags']['$t'],
-            'fachgebiet-destatis'=>$entry['gsx$fachgebiet-nrdestatisoptional']['$t'],
-            'sprache'=>$entry['gsx$sprache']['$t'],
-          );
 
           $sanitizedObjectData = array();
 
-          foreach($fields_single as $fieldName => $fieldValueString){
-            // check if empty
+          foreach($this->config->item('openeducationtagger_single_value_fields') as $fieldNameElastic => $gsxColumnName){
+            // check if empty  // check if empty?
 
-            $fieldValueSanitized = filter_var($fieldValueString, FILTER_SANITIZE_STRING);
+            $fieldValueSanitized = filter_var($entry['gsx$'.$gsxColumnName.'']['$t'], FILTER_SANITIZE_STRING);
 
-            $sanitizedObjectData["".$fieldName.""] = $fieldValueSanitized;
+            $sanitizedObjectData["".$fieldNameElastic.""] = $fieldValueSanitized;
           }
 
-          foreach($fields_multiple as $fieldName => $fieldValueString){
+          foreach($this->config->item('openeducationtagger_multiple_value_fields') as $fieldNameElastic => $gsxColumnName){
             // check if empty
 
-            if(strpos($fieldValueString,",")!=false){
-              $fieldValueArray = explode(",", $fieldValueString);
+            if(strpos($entry['gsx$'.$gsxColumnName.'']['$t'],",")!=false){
+              $fieldValueArray = explode(",", $entry['gsx$'.$gsxColumnName.'']['$t']);
               $fieldValueSanitized = filter_var_array($fieldValueArray,FILTER_SANITIZE_STRING);
             }else{
-              $fieldValueSanitized = array(filter_var($fieldValueString, FILTER_SANITIZE_STRING));
+              $fieldValueSanitized = array(filter_var($entry['gsx$'.$gsxColumnName.'']['$t'], FILTER_SANITIZE_STRING));
             }
 
-            $sanitizedObjectData["".$fieldName.""] = $fieldValueSanitized;
+            $sanitizedObjectData["".$fieldNameElastic.""] = $fieldValueSanitized;
           }
 
             /*custom_log_message("Sanizited entry: ".print_r($fieldValueSanitized,true));*/
@@ -137,7 +129,7 @@ class Cli extends CI_Controller
           // supports only one index right now:
 					custom_log_message("Trying to publish to index, see /application/logs/ for these logs (Log threshold must be set to 4)");
           custom_log_message("URL:".$this->config->item('elasticsearch_url'));
-					$resultElasticId = $this->elasticsearch->publish_to_index($sanitizedObjectData,$this->config->item('elasticsearch_url'),$this->config->item('elasticsearch_auth_string_write'));
+					$resultElasticId = $this->elasticsearchapi->publish_to_index($sanitizedObjectData,$this->config->item('openeducationtagger_elasticsearch_url'),$this->config->item('openeducationtagger_elasticsearch_auth_string_write'));
 
           custom_log_message("Elastic success id: ".$resultElasticId);
 

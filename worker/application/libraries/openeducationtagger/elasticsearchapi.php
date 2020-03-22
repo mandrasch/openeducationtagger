@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Elasticsearch {
+class Elasticsearchapi {
 
 	public function __construct() {
 
