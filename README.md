@@ -10,6 +10,8 @@ Collect freely accessible teaching/learning resources with a simple google drive
 - Collect data together: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1kntJWO9iP6rL6WFqKXNsINoa923LjoDfEz38_NA4-ao/edit?usp=sharing)
 - Search interface built with reactive-search: WORK IN PROGRESS, tba
 
+Repository for frontend: [https://github.com/programmieraffe/open-education-tagger-frontend](https://github.com/programmieraffe/open-education-tagger-frontend)
+
 Beware: quick & dirty solution, no warranty, not a professional product
 
 ## Why?
