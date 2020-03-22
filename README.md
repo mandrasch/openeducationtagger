@@ -7,7 +7,7 @@
 
 Collect freely accessible teaching/learning resources with a simple google drive spreadsheet, synchronize it to elasticsearch and display it with a nice search interface for educators and learners:
 
-- Collect data together: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1kntJWO9iP6rL6WFqKXNsINoa923LjoDfEz38_NA4-ao/edit?usp=sharing)
+- Collect data together: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
 - Search interface built with reactive-search: WORK IN PROGRESS, tba
 
 Repository for frontend: [https://github.com/programmieraffe/open-education-tagger-frontend](https://github.com/programmieraffe/open-education-tagger-frontend)
