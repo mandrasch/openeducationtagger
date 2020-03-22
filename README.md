@@ -1,4 +1,33 @@
-## Setup
+
+⚠️ Work in progress ⚠️
+
+
+# OpenEducationTagger
+
+
+Collect freely accessible teaching/learning resources with a simple google drive spreadsheet and display it with a nice search interface for educators and learners (no webserver needed, you can just use GitHub pages).
+
+- Collect data together: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1kntJWO9iP6rL6WFqKXNsINoa923LjoDfEz38_NA4-ao/edit?usp=sharing)
+- Search interface hosted on github pages: [https://programmieraffe.github.io/coronacampus-reactivesearch/](https://programmieraffe.github.io/coronacampus-reactivesearch/) ⚠️ Work in progress, does not work correctly by now
+
+Beware: quick & dirty solution, no warranty, not a professional product
+
+## Important notes
+
+If you change the column names in the spreadsheet, you need to customize `controllers/coronacampus/Cli.php` as well as the search interface data model in `frontend-reactive-search` (see foreach-loop for entries).
+
+## Set it up yourself
+
+### 1. Google Spreadsheet for URL collection
+
+[Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1kntJWO9iP6rL6WFqKXNsINoa923LjoDfEz38_NA4-ao/edit?usp=sharing)
+
+1. Copy this
+2. Make it publicly available
+3. Get ID for spreadsheet + worksheet
+4. Test if URL is correct
+
+## Setup heroku
 
 Steps needed before:
 
