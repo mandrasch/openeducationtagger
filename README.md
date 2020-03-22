@@ -16,7 +16,7 @@ Beware: quick & dirty solution, no warranty, not a professional product
 
 ## Why?
 
-- an online spreadsheet is the fastest way to collect resources together, forms are annyoing
+- an online spreadsheet is the fastest way to collect resources together, forms are annoying
 - everyone should be able to collect & provide current resources in a nice and modern way
 
 ## Important notes
@@ -35,6 +35,8 @@ If you change the column names in the spreadsheet, you need to customize `contro
 4. Test if URL is correct
 
 ## Setup heroku
+
+⚠️ 2DO: Use "EU" --region=region? https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-apps-create-app
 
 Steps needed before:
 
