@@ -6,7 +6,7 @@ Steps needed before:
 - Create an elasticsearch instance at [appbase.io](https://appbase.io), [bonsai.io](https://bonsaio.io), stackheore 
 - Prepare the spreadsheet (Clone, publish and note URL - 2DO: provide better infos)
 
-(Note for bonsai.io: You need to manually create an index and append it to the url, auto-index is disabled)
+(Note for bonsai.io: You need to manually create an index and append it to the url, auto-index is disabled + no read-only API keys available in bonsai free)
 
 Steps for installation of sync worker (spreadsheet >>> appbase-index)
 
@@ -128,5 +128,19 @@ APPBASE_APP_NAME:          coronacampus-heroku
 APPBASE_AUTH_STRING_READ:  XZXXXXX:1XXXXX-XXXX-446c-bf7c-4d327bd203fc
 APPBASE_AUTH_STRING_WRITE: OsWXXXXXX:0fad4509-6da1-XXXXXXXXX-XXXX
 ```
+
+
+
+## React docu
+
+[https://docs.appbase.io/docs/reactivesearch/v3/overview/quickstart/](https://docs.appbase.io/docs/reactivesearch/v3/overview/quickstart/)
+
+```
+npx create-react-app coroncampuswebapp
+cd coronacampuswebapp
+npm install @appbaseio/reactivesearch
+```
+
+Replace index.js, use `process.env.` to access .env vars:
 
 
