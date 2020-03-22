@@ -35,15 +35,13 @@ class Cli extends CI_Controller
 		/* takes public google spreadsheet url (json), see https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6
 		* @$spreadsheetUrlEncoded - utf8 encoded URL
 		*/
-    public function syncdatafromworksheet($worksheetUrl, $publishToProduction = false)
+    public function syncdatafromworksheet()
     {
 
         $this->load->config('elasticsearch');
         $this->load->library('coronacampus/elasticsearch');
 
 				$worksheetUrl = $this->config->item('worksheet_url_json');
-
-
 
         // publish to production removed by now, just set other values in config/appbase.php if you want to use a test instance
         /*if (!$publishToProduction) {
