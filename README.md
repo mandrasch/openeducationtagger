@@ -19,7 +19,7 @@ Beware: quick & dirty solution, no warranty, not a professional product
 
 ## Important notes
 
-If you change the column names in the spreadsheet, you need to customize `controllers/coronacampus/Cli.php` as well as the search interface data model in `frontend-reactive-search` (see foreach-loop for entries).
+If you change the column names in the spreadsheet, you need to customize `controllers/coronacampus/Cli.php` (see foreach-loop for entries) as well as the search interface data model in `frontend-reactive-search`.
 
 ## Set it up yourself
 
