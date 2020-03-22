@@ -23,7 +23,7 @@ Steps for installation of sync worker (spreadsheet >>> appbase-index)
 
 
 2OD: 
-
+- use rabbitmq queue and redis as well to trigger worker? (see: https://devcenter.heroku.com/articles/php-workers#defining-process-types)
 - set env var for spreadsheet encoded URL (or use multiple spreadsheets?)
 - only update if updateTime in json changed?
 - check for 
@@ -142,5 +142,24 @@ npm install @appbaseio/reactivesearch
 ```
 
 Replace index.js, use `process.env.` to access .env vars:
+```
+import React, { Component } from 'react';
+import { ReactiveBase } from '@appbaseio/reactivesearch';
 
+class App extends Component {
+	render() {
+		return (
+			<ReactiveBase
+				app="carstore-dataset"
+				credentials="process.env.ELASTICSEARCH_AUTH_STRING_READ"
+			>
+				// other components will go here.
+				<div>Hello ReactiveSearch!</div>
+			</ReactiveBase>
+		);
+	}
+}
+```
+
+Run it: `heroku local coronacampuswebapp`
 

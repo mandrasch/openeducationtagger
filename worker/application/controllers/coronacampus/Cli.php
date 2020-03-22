@@ -35,13 +35,15 @@ class Cli extends CI_Controller
 		/* takes public google spreadsheet url (json), see https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6
 		* @$spreadsheetUrlEncoded - utf8 encoded URL
 		*/
-    public function loadspreadsheet($spreadsheetUrlEncoded, $publishToProduction = false)
+    public function syncdatafromworksheet($worksheetUrl, $publishToProduction = false)
     {
-
-				$spreadsheetUrl = urldecode($spreadsheetUrlEncoded);
 
         $this->load->config('elasticsearch');
         $this->load->library('coronacampus/elasticsearch');
+
+				$worksheetUrl = $this->config->item('worksheet_url_json');
+
+
 
         // publish to production removed by now, just set other values in config/appbase.php if you want to use a test instance
         /*if (!$publishToProduction) {
@@ -54,14 +56,14 @@ class Cli extends CI_Controller
         custom_log_message("Start loadspreadsheet");
 
 				// $spreadsheetUrl = 'https://spreadsheets.google.com/feeds/list/1kntJWO9iP6rL6WFqKXNsINoa923LjoDfEz38_NA4-ao/od6/public/values?alt=json';
-        custom_log_message("Curling url: ".print_r($spreadsheetUrl,true));
+        custom_log_message("Curling url: ".print_r($worksheetUrl,true));
 
         $ch = curl_init();
         $timeout = 30;
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-        curl_setopt($ch, CURLOPT_URL, $spreadsheetUrl);
+        curl_setopt($ch, CURLOPT_URL, $worksheetUrl);
 
         // Get URL content
         $response = curl_exec($ch);
