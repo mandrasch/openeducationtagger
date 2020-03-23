@@ -10,17 +10,11 @@ Collect freely accessible teaching/learning resources with a simple google drive
 
 Status: Early Alpha
 
-📝 **Collect data together**
+📝 **Collect data together**: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
 
-[Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
+♻️ **Synchronize (to elasticsearch)**: PHP CLI script, run via heroku.com (see below)
 
-♻️ **Synchronize (to elasticsearch)**
-
-PHP CLI script, run via heroku.com (see below)
-
-🔎 **Search interface (reactive search)**
-
-WIP, preview: [Search Interface](https://programmieraffe.gitlab.io/open-education-tagger-frontend/index.html) |
+🔎 **Search interface (reactive search)** WIP, preview: [Search Interface](https://programmieraffe.gitlab.io/open-education-tagger-frontend/index.html) |
 [GitLab Repo](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
 
 
