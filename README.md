@@ -6,16 +6,23 @@ See also 👉 current project from german hackathon: [https://twitter.com/FloRa_
 
 # OpenEducationTagger
 
+Collect freely accessible teaching/learning resources with a simple google drive spreadsheet, synchronize it to elasticsearch and display it with a nice search interface for educators and learners.
 
-Collect freely accessible teaching/learning resources with a simple google drive spreadsheet, synchronize it to elasticsearch and display it with a nice search interface for educators and learners:
+Status: Early Alpha
 
-- Collect data together: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
-- Search interface built with reactive-search: WORK IN PROGRESS, Preview: [https://programmieraffe.gitlab.io/open-education-tagger-frontend/](https://programmieraffe.gitlab.io/open-education-tagger-frontend/index.html)
+📝 **Collect data together**
 
-Repository for frontend: 
-[https://gitlab.com/programmieraffe/open-education-tagger-frontend](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
+[Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
 
-Beware: quick & dirty solution, no warranty, not a professional product
+♻️ **Synchronize (to elasticsearch)**
+
+PHP CLI script, run via heroku.com (see below)
+
+🔎 **Search interface (reactive search)**
+
+WIP, preview: [Search Interface](https://programmieraffe.gitlab.io/open-education-tagger-frontend/index.html) |
+[GitLab Repo](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
+
 
 ## Demo Playground
 
