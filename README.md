@@ -34,7 +34,16 @@ If you change the column names in the spreadsheet, you need to customize `contro
 3. Get ID for spreadsheet + worksheet
 4. Test if URL is correct
 
-## Setup heroku
+### Setup elasticsearch (flexibile database)
+
+Providers with easy instance setup:
+
+- [appbase.io](https://openwashing.org/)
+- [bonsai.io](https://openwashing.org/) (read-only-key only on paid accounts)
+- [stackhero.io](https://stackhero.io/) (no read-only-key, but they're working on it, EU-hosting)
+
+
+### Setup heroku
 
 ⚠️ 2DO: Use "EU" --region=region? https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-apps-create-app
 `heroku apps:create --region eu`
