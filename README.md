@@ -19,9 +19,7 @@ Beware: quick & dirty solution, no warranty, not a professional product
 - an online spreadsheet is the fastest way to collect resources together, forms are annoying
 - everyone should be able to collect & provide current resources in a nice and modern way
 
-## Important notes
 
-If you change the column names in the spreadsheet, you need to customize `controllers/coronacampus/Cli.php` (see foreach-loop for entries) as well as the search interface data model in `frontend-reactive-search`.
 
 ## Set it up yourself
 
@@ -33,6 +31,8 @@ If you change the column names in the spreadsheet, you need to customize `contro
 2. Make it publicly available
 3. Get ID for spreadsheet + worksheet
 4. Test if URL is correct
+
+⚠️ **Important notes:** Don't change the column title names unless you're a web developer. If you change the column names in the spreadsheet, you need to customize 'config/openeducationtagger.php' as well as the search interface data model in the frontend.
 
 ### 2. Setup elasticsearch (flexible database)
 
