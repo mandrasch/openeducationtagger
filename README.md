@@ -4,21 +4,22 @@
 See also 👉 current project from german hackathon: [https://twitter.com/FloRa_Education/status/1242056840671879168](https://twitter.com/FloRa_Education/status/1242056840671879168)
 
 
-# OpenEducationTagger
+# OpenEducationTagger 👩‍💻🔎
 
-👩‍💻🔎 Collect freely accessible teaching/learning resources with a simple google drive spreadsheet and display it with a nice search interface for educators and learners (powered by elasticsearch + reactive-search UI).
+Collect freely accessible teaching/learning resources with a simple google drive spreadsheet and display it with a nice search interface for educators and learners (powered by elasticsearch + reactive-search UI).
 
-Status: Early Alpha
 
-📝 **Collect data together**: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
+1. 📝 **Collect data together**: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
 
-♻️ **Synchronize (to elasticsearch)**: PHP CLI script, run via heroku.com (see below)
+2. ♻️ **Synchronize (to elasticsearch)**: PHP CLI script, run via heroku.com (see below)
 
-🔎 **Search interface (reactive search)** WIP, preview: [Search Interface](https://programmieraffe.gitlab.io/open-education-tagger-frontend/index.html) |
+3. 🔎 **Search interface (reactive search)** WIP, preview: [Search Interface](https://programmieraffe.gitlab.io/open-education-tagger-frontend/index.html) |
 [GitLab Repo](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
 
+Status: Early Alpha, no professional product
 
-## Demo Playground
+
+## 📝 Demo Playground
 
 1. Add/change something: SPREADSHEET-PLAYGROUND
 2. Every 10 minutes changes will be synced
@@ -42,8 +43,9 @@ Status: Early Alpha
 - better curl response / error handling
 - add very simple storage on heroku and save "lastupdated"-information from spreadsheet?
 - use webhook for sync (via zapier, etc.?), heroku allows webhooks
+- frontend needs to be responsive for mobile usage
 
-## Set it up yourself
+## 🔨 Set it up yourself
 
 ### 1. Google Spreadsheet for URL collection
 
