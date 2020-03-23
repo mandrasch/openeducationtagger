@@ -132,20 +132,13 @@ sed 's/#[^("|'')]*$//;s/^#.*$//' .env | \
 
 ### 4. Frontend: reactive-search
 
-Repository:
+See repository for install instructions: 
 [https://github.com/programmieraffe/open-education-tagger-frontend](https://github.com/programmieraffe/open-education-tagger-frontend)
 
 2DO: commands to build
 
 
-#### 4.1 Hosting on heroku
 
-
-#### 4.2 Hosting on github pages
-
-#### 4.3 Hosting on gitlab pages
-
-#### 4.4 Hosting on own webspace
 
 
 ## Personal Notes
