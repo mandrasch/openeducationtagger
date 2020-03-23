@@ -10,18 +10,37 @@ See also 👉 current project from german hackathon: [https://twitter.com/FloRa_
 Collect freely accessible teaching/learning resources with a simple google drive spreadsheet, synchronize it to elasticsearch and display it with a nice search interface for educators and learners:
 
 - Collect data together: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
-- Search interface built with reactive-search: WORK IN PROGRESS, tba [see another example at: [https://beta2.oerhoernchen.de/hochschule](https://beta2.oerhoernchen.de/hochschule)]
+- Search interface built with reactive-search: WORK IN PROGRESS, Preview: [https://programmieraffe.gitlab.io/open-education-tagger-frontend/](https://programmieraffe.gitlab.io/open-education-tagger-frontend/index.html)
 
-Repository for frontend: [https://gitlab.com/programmieraffe/open-education-tagger-frontend](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
+Repository for frontend: 
+[https://gitlab.com/programmieraffe/open-education-tagger-frontend](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
 
 Beware: quick & dirty solution, no warranty, not a professional product
+
+## Demo Playground
+
+1. Add/change something: SPREADSHEET-PLAYGROUND
+2. Every 10 minutes changes will be synced
+3. Browse through data: SEARCH-FRONTEND-PLAYGROUND
 
 ## Why?
 
 - an online spreadsheet is the fastest way to collect resources together, forms are annoying
 - everyone should be able to collect & provide current resources in a nice and modern way
 
+### Goals?
 
+- Setup should also be possible with browser only
+- First setup should be possible with zero budget
+
+
+### 2DO:
+
+- convert cc license url string
+- catch appbase.io 429 rate limit exceeded (curl{"status":429,"message":"Rate limit exceeded."})
+- better curl response / error handling
+- add very simple storage on heroku and save "lastupdated"-information from spreadsheet?
+- use webhook for sync (via zapier, etc.?), heroku allows webhooks
 
 ## Set it up yourself
 
@@ -29,10 +48,11 @@ Beware: quick & dirty solution, no warranty, not a professional product
 
 [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1kntJWO9iP6rL6WFqKXNsINoa923LjoDfEz38_NA4-ao/edit?usp=sharing)
 
-1. Copy this
+1. Copy this (File -> Copy)
 2. Make it publicly available
-3. Get ID for spreadsheet + worksheet
-4. Test if URL is correct
+3. Get ID for spreadsheet + worksheet: [https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6](https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6)
+4. Test if URL is correct in browser and returns json
+5. Save this URL, you'll need it in step 3
 
 ⚠️ **Important notes:** Don't change the column title names unless you're a web developer. If you change the column names in the spreadsheet, you need to customize 'config/openeducationtagger.php' as well as the search interface data model in the frontend.
 
@@ -45,7 +65,9 @@ Providers with easy instance setup:
 - [stackhero.io](https://stackhero.io/) (no read-only-key, but they're working on it, EU-hosting)
 
 
-### 3. Setup heroku (php sync worker)
+### 3. Setup php sync script (heroku)
+
+2DO: Setup via browser only
 
 ⚠️ 2DO: Use "EU" --region=region? https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-apps-create-app
 `heroku apps:create --region eu`
@@ -87,6 +109,10 @@ Curl response stdClass Object
  [message] => Rate limit exceeded.
  )
 ```
+
+#### 2DO:
+
+- ⚠️ catch curl 429 rate limit exceeded for appbase.io
 
 #### 3.1 Heroku scheduler (cron)
 
@@ -135,9 +161,12 @@ sed 's/#[^("|'')]*$//;s/^#.*$//' .env | \
 ### 4. Frontend: reactive-search
 
 See repository for install instructions: 
+
 [https://github.com/programmieraffe/open-education-tagger-frontend](https://github.com/programmieraffe/open-education-tagger-frontend)
 
 2DO: commands to build
+
+[https://gitlab.com/programmieraffe/open-education-tagger-frontend](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
 
 
 
