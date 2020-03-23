@@ -34,7 +34,7 @@ If you change the column names in the spreadsheet, you need to customize `contro
 3. Get ID for spreadsheet + worksheet
 4. Test if URL is correct
 
-### Setup elasticsearch (flexibile database)
+### 2. Setup elasticsearch (flexible database)
 
 Providers with easy instance setup:
 
@@ -43,7 +43,7 @@ Providers with easy instance setup:
 - [stackhero.io](https://stackhero.io/) (no read-only-key, but they're working on it, EU-hosting)
 
 
-### Setup heroku
+### 3. Setup heroku (php sync worker)
 
 ⚠️ 2DO: Use "EU" --region=region? https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-apps-create-app
 `heroku apps:create --region eu`
@@ -84,7 +84,7 @@ Curl response stdClass Object
  )
 ```
 
-## Scheduler
+#### 3.1 Heroku scheduler (cron)
 
 `heroku addons:create scheduler:standard`
 
@@ -96,7 +96,7 @@ Test command:
 Create job with the above command
 
 
-## Test locally
+#### 3.2 Test locally
 
 The script can be tested locally with
 
@@ -127,6 +127,23 @@ https://www.fomfus.com/articles/how-to-set-heroku-environmental-variables-from-d
 sed 's/#[^("|'')]*$//;s/^#.*$//' .env | \
   xargs heroku config:set
 ```
+
+### 4. Frontend: reactive-search
+
+Repository:
+[https://github.com/programmieraffe/open-education-tagger-frontend](https://github.com/programmieraffe/open-education-tagger-frontend)
+
+2DO: commands to build
+
+
+#### 4.1 Hosting on heroku
+
+
+#### 4.2 Hosting on github pages
+
+#### 4.3 Hosting on gitlab pages
+
+#### 4.4 Hosting on own webspace
 
 
 ## Personal Notes
