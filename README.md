@@ -6,7 +6,7 @@ See also 👉 current project from german hackathon: [https://twitter.com/FloRa_
 
 # OpenEducationTagger
 
-Collect freely accessible teaching/learning resources with a simple google drive spreadsheet, synchronize it to elasticsearch and display it with a nice search interface for educators and learners.
+👩‍💻🔎 Collect freely accessible teaching/learning resources with a simple google drive spreadsheet and display it with a nice search interface for educators and learners (powered by elasticsearch + reactive-search UI).
 
 Status: Early Alpha
 
@@ -47,7 +47,7 @@ Status: Early Alpha
 
 ### 1. Google Spreadsheet for URL collection
 
-[Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1kntJWO9iP6rL6WFqKXNsINoa923LjoDfEz38_NA4-ao/edit?usp=sharing)
+[Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
 
 1. Copy this (File -> Copy)
 2. Make it publicly available
