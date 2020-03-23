@@ -2,8 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 // Appbase config using herokus getenv
-$config['openeducationtagger_elasticsearch_url'] = getenv("ELASTICSEARCH_URL");
-$config['openeducationtagger_elasticsearch_auth_string_read'] = getenv("ELASTICSEARCH_AUTH_STRING_READ");
+$config['openeducationtagger_elasticsearch_url'] = getenv("REACT_APP_ELASTICSEARCH_URL").'/'.getenv("REACT_APP_ELASTICSEARCH_INDEXNAME");
+
 // called admin api key in appbase:
 $config['openeducationtagger_elasticsearch_auth_string_write'] = getenv("ELASTICSEARCH_AUTH_STRING_WRITE");
 

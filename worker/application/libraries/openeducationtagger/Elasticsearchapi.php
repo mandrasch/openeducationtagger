@@ -186,6 +186,8 @@ class Elasticsearchapi{
 
 			$urlIndexOrUpdate = $appbase_api_url. '/_doc/'.$responseObjectQueryForMainUrl->hits->hits[0]->_id;
 			$jsonRequestData = json_encode($sanitized_object_array);
+
+
 			// "doc": { "name": "Jane Doe" }
 
 		}
@@ -195,6 +197,8 @@ class Elasticsearchapi{
 			$jsonRequestData = json_encode($sanitized_object_array);
 			custom_log_message("We create a new document, pushing it to ".$urlIndexOrUpdate);
 		}
+
+		custom_log_message("Submitted JSON data to elastic :".$jsonRequestData);
 
 		// index a new document / update it
 		curl_setopt_array($curl, array(
