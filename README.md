@@ -1,6 +1,8 @@
 
 ⚠️ Work in progress, documentation will be updated in the next days ⚠️
 
+See also 👉 current project from german hackathon: [https://twitter.com/FloRa_Education/status/1242056840671879168](https://twitter.com/FloRa_Education/status/1242056840671879168)
+
 
 # OpenEducationTagger
 
