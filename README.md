@@ -12,7 +12,7 @@ Collect freely accessible teaching/learning resources with a simple google drive
 - Collect data together: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
 - Search interface built with reactive-search: WORK IN PROGRESS, tba [see another example at: [https://beta2.oerhoernchen.de/hochschule](https://beta2.oerhoernchen.de/hochschule)]
 
-Repository for frontend: [https://github.com/programmieraffe/open-education-tagger-frontend](https://github.com/programmieraffe/open-education-tagger-frontend)
+Repository for frontend: [https://gitlab.com/programmieraffe/open-education-tagger-frontend](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
 
 Beware: quick & dirty solution, no warranty, not a professional product
 
@@ -60,17 +60,19 @@ Steps needed before:
 
 Steps for installation of sync worker (spreadsheet >>> elasticsearch index)
 
-1. Fork this repo
-2. Set it up locally
-3. Create heroku app with `heroku create` (This will add a git:remote source) / or if it already exists `heroku git:remote -a APPNAME`
-4. Add config values to heroku.com dashboard
-5. Add .env config values for local testing
-4. Test locally with `heroku local worker`
-5. If you had any changes, commit them via git
-5. If it works, push to heroku `git push heroku master` (pushing to Github will not be enough)
-6. Start the web worker: `heroku ps:scale worker=1` (Stop it with `heroku ps:scale worker=0`)
-7. Check logs for errors: `heroku logs --tail --ps worker`
-
+1. `git clone https://github.com/programmieraffe/open-education-tagger.git`
+2. Create heroku app: `heroku apps:create YOURAPPNAME --region eu` or `heroku apps:create --region eu`
+2. `cp .env.example .env`
+3. Edit config vars for elasticsearch API with read-write-API-key
+4. set config values on heroku.com as well:
+`sed 's/#[^("|'')]*$//;s/^#.*$//' .env | \
+  xargs heroku config:set`
+5. (Test locally with `heroku local worker`)
+6. (If you changed source code, commit them via git)
+7. Deploy & push to heroku `git push heroku master` (pushing to Github will not be enough!)
+8. Start the web worker: `heroku ps:scale worker=1` (Stop it with `heroku ps:scale worker=0`)
+9. Check logs for errors: `heroku logs --tail --ps worker`
+10. Check frontend/elasticsearch-UI to see if sync worked
 
 2OD: 
 - use rabbitmq queue and redis as well to trigger worker? (see: https://devcenter.heroku.com/articles/php-workers#defining-process-types)
