@@ -13,28 +13,35 @@ See also:
 
 **Status:** Early Alpha, no professional product
 
-**Description:** Collect freely accessible teaching/learning resource together and build your own little search engine with a nice user interface. Sounds great? Here is what you need to do (no nerdy commandline-usage necessary):
+Collect freely accessible teaching/learning resource together and build your own little search engine with a nice user interface? Sounds great? The best thing: no nerdy command line usage necessary.
 
-1. 📝 **Collect data together**:<br>Duplicate and publish this [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
+### Here is what you need to do:
+
+1. 📝 **Collect educational resources together**:<br>Duplicate and publish this [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
 
 2. 🗂 **Setup an elasticsearch index:**<br>For example via [appbase.io](https://appbase.io/), [bonsai.io](https://bonsai.io/), [stackhero.io](https://stackhero.io/), etc.
 
 
-3. 📝➡️🗂 **Send spreadsheet data to elasticsearch**:<br>Use the OpenEducationTagger online-tool:  ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index)
+3. 📝➡️🗂 **Send spreadsheet data to elasticsearch index**:<br>Use the OpenEducationTagger online-tool:  ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index)
 
 3. 🔎 **Setup a nice-looking search interface:** <br>Fork [this](https://gitlab.com/programmieraffe/openeducationtagger-frontend)  gitlab.com-repository, add some config values via web browser and generate a nice and friendly [Search Interface](https://programmieraffe.gitlab.io/openeducationtagger-frontend/index.html) powered by reactive-search. (Currently work-in-progress)
 
-Built with
-
-- reactive-search (Open Source)
-- Gitlab.com CI
-- Tutorials provided by people from all over the world
-- Open Source Magic
 
 ## Related repositories
 
 - [https://gitlab.com/programmieraffe/openeducationtagger-spreadsheet2index](https://gitlab.com/programmieraffe/openeducationtagger-spreadsheet2index)
 - [https://gitlab.com/programmieraffe/openeducationtagger-frontend](https://gitlab.com/programmieraffe/openeducationtagger-frontend)
+
+### Inspired by
+
+- [https://timeline.knightlab.com/](https://timeline.knightlab.com/)
+- [https://dejavu.appbase.io/](https://dejavu.appbase.io/)
+
+## Built with
+
+- reactive-search (Open Source)
+- Gitlab.com CI
+- Tutorials provided by people from all over the world <3
 
 ## 🔨 Set it up yourself - Screencast (coming soon)
 
