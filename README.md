@@ -1,29 +1,51 @@
 
 ⚠️ Work in progress, documentation will be updated in the next days ⚠️
 
-See also 👉 current project from german hackathon: [https://twitter.com/FloRa_Education/status/1242056840671879168](https://twitter.com/FloRa_Education/status/1242056840671879168)
+See also: 
+
+- 👉 current project from german hackathon: ["DigiCampus"](https://twitter.com/FloRa_Education/status/1242056840671879168)
+- 👉 Steffen Rörtgen [oerhoernchen20-docker](https://github.com/sroertgen/oerhoernchen20_docker/tree/master/docker_hoernchen)
 
 
 # OpenEducationTagger 👩‍💻🔎
 
-Collect freely accessible teaching/learning resources with a simple google drive spreadsheet and display it with a nice search interface for educators and learners (powered by elasticsearch + reactive-search UI).
+**Build your own little educational search engine**
+
+**Status:** Early Alpha, no professional product
+
+**Description:** Collect freely accessible teaching/learning resource together and build your own little search engine with a nice user interface. Sounds great? Here is what you need to do (no nerdy commandline-usage necessary):
+
+1. 📝 **Collect data together**:<br>Duplicate and publish this [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
+
+2. 🗂 **Setup an elasticsearch index:**<br>For example via [appbase.io](https://appbase.io/), [bonsai.io](https://bonsai.io/), [stackhero.io](https://stackhero.io/), etc.
 
 
-1. 📝 **Collect data together**: [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
+3. 📝➡️🗂 **Send spreadsheet data to elasticsearch**:<br>Use the OpenEducationTagger online-tool:  ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index)
 
-2. ♻️ **Synchronize (to elasticsearch)**: PHP CLI script, run via heroku.com (see below)
+3. 🔎 **Setup a nice-looking search interface:** <br>Fork [this](https://gitlab.com/programmieraffe/openeducationtagger-frontend)  gitlab.com-repository, add some config values via web browser and generate a nice and friendly [Search Interface](https://programmieraffe.gitlab.io/openeducationtagger-frontend/index.html) powered by reactive-search. (Currently work-in-progress)
 
-3. 🔎 **Search interface (reactive search)** WIP, preview: [Search Interface](https://programmieraffe.gitlab.io/open-education-tagger-frontend/index.html) |
-[GitLab Repo](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
+Built with
 
-Status: Early Alpha, no professional product
+- reactive-search (Open Source)
+- Gitlab.com CI
+- Tutorials provided by people from all over the world
+- Open Source Magic
+
+## Related repositories
+
+- [https://gitlab.com/programmieraffe/openeducationtagger-spreadsheet2index](https://gitlab.com/programmieraffe/openeducationtagger-spreadsheet2index)
+- [https://gitlab.com/programmieraffe/openeducationtagger-frontend](https://gitlab.com/programmieraffe/openeducationtagger-frontend)
+
+## 🔨 Set it up yourself - Screencast (coming soon)
 
 
-## 📝 Demo Playground
+## 📝 Demo Playground (coming soon)
 
 1. Add/change something: SPREADSHEET-PLAYGROUND
 2. Every 10 minutes changes will be synced
 3. Browse through data: SEARCH-FRONTEND-PLAYGROUND
+
+
 
 ## Why?
 
@@ -45,7 +67,7 @@ Status: Early Alpha, no professional product
 - use webhook for sync (via zapier, etc.?), heroku allows webhooks
 - frontend needs to be responsive for mobile usage
 
-## 🔨 Set it up yourself
+## 🔨 Set it up yourself (coming soon)
 
 ### 1. Google Spreadsheet for URL collection
 
@@ -68,7 +90,7 @@ Providers with easy instance setup:
 - [stackhero.io](https://stackhero.io/) (no read-only-key, but they're working on it, EU-hosting)
 
 
-### 3. Setup php sync script (heroku)
+### (OLD/optional: 3. Setup php sync script (heroku))
 
 2DO: Setup via browser only
 
@@ -163,13 +185,6 @@ sed 's/#[^("|'')]*$//;s/^#.*$//' .env | \
 
 ### 4. Frontend: reactive-search
 
-See repository for install instructions: 
-
-[https://github.com/programmieraffe/open-education-tagger-frontend](https://github.com/programmieraffe/open-education-tagger-frontend)
-
-2DO: commands to build
-
-[https://gitlab.com/programmieraffe/open-education-tagger-frontend](https://gitlab.com/programmieraffe/open-education-tagger-frontend)
 
 
 
