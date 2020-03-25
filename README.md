@@ -1,5 +1,7 @@
 
-⚠️ Work in progress, documentation will be updated in the next days ⚠️
+⚠️ Work in progress. Early alpha, no professional product
+
+⚠️ Documentation will be updated in the next days 
 
 See also: 
 
@@ -10,8 +12,6 @@ See also:
 # OpenEducationTagger 👩‍💻🔎
 
 **Build your own little educational search engine**
-
-**Status:** Early Alpha, no professional product
 
 Collect freely accessible teaching/learning resource together and build your own little search engine with a nice user interface? Sounds great? The best thing: no nerdy command line usage necessary.
 
