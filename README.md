@@ -8,7 +8,7 @@ See also:
 - 👉 current project from german hackathon: ["DigiCampus"](https://twitter.com/FloRa_Education/status/1242056840671879168)
 - 👉 Steffen Rörtgen [oerhoernchen20-docker](https://github.com/sroertgen/oerhoernchen20_docker/tree/master/docker_hoernchen)
 - 👉 professional: [https://gitlab.com/oersi](gitlab.com/oersi), [x5gon](https://www.x5gon.org/), [oasis.geneseo.edu/](https://oasis.geneseo.edu/)
-- 👉 upcoming: Social network approach with federated instances [moodle.net/](https://moodle.net/) 💛
+- 👉 💛💛 upcoming: Social network approach with federated instances [moodle.net/](https://moodle.net/) 💛💛
 
 
 # OpenEducationTagger 👩‍💻🔎
