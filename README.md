@@ -19,14 +19,14 @@ Collect freely accessible teaching/learning resource together and build your own
 
 ### Here is what you need to do:
 
-1. 📝 **Collect educational resources together**:<br>Duplicate and publish this [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
+1. 📝 **Collect educational resources together**<br>Duplicate this [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing), collect resources with friends and colleagues, publish the file afterwards via "File -> Publish in the web" (see instructions below).
 
-2. 🗂 **Setup an elasticsearch index:**<br>For example via [appbase.io](https://appbase.io/), [bonsai.io](https://bonsai.io/), [stackhero.io](https://stackhero.io/), [qbox.io](https://qbox.io/), [cloud.elastic.co](https://cloud.elastic.co/) etc.
+2. 🗂 **Setup an elasticsearch index**<br>For example via [appbase.io](https://appbase.io/), [bonsai.io](https://bonsai.io/), [stackhero.io](https://stackhero.io/), [qbox.io](https://qbox.io/), [cloud.elastic.co](https://cloud.elastic.co/) etc.
 
 
-3. 📝➡️🗂 **Send spreadsheet data to elasticsearch index**:<br>Use the OpenEducationTagger online-tool:  ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index)
+3. 📝➡️🗂 **Send spreadsheet data to elasticsearch index:** ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index)<br>Just use the OpenEducationTagger online-tool ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index), no command line usage necessary, just a modern webbrowser. (For advanced users: setup a nodejs cron job on heroku.com).
 
-3. 🔎 **Setup a nice-looking search interface:** <br>Fork [this](https://gitlab.com/programmieraffe/openeducationtagger-frontend)  gitlab.com-repository, add some config values via web browser and generate a nice and friendly [Search Interface](https://programmieraffe.gitlab.io/openeducationtagger-frontend/index.html) powered by reactive-search. (Currently work-in-progress)
+3. 🔎 **Setup a nice-looking search interface:** [Live-Demo](https://programmieraffe.gitlab.io/openeducationtagger-frontend/index.html)<br>Fork [this](https://gitlab.com/programmieraffe/openeducationtagger-frontend)  gitlab.com-repository, add some config values via web browser and generate a nice and friendly powered by reactive-search. (Currently work-in-progress)
 
 
 ## Related repositories
