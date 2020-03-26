@@ -7,6 +7,8 @@ See also:
 
 - 👉 current project from german hackathon: ["DigiCampus"](https://twitter.com/FloRa_Education/status/1242056840671879168)
 - 👉 Steffen Rörtgen [oerhoernchen20-docker](https://github.com/sroertgen/oerhoernchen20_docker/tree/master/docker_hoernchen)
+- 👉 professional: [https://gitlab.com/oersi](gitlab.com/oersi), [x5gon](https://www.x5gon.org/), [oasis.geneseo.edu/](https://oasis.geneseo.edu/)
+- 👉 upcoming: Social network approach with federated instances [moodle.net/](https://moodle.net/) 💛
 
 
 # OpenEducationTagger 👩‍💻🔎
@@ -19,7 +21,7 @@ Collect freely accessible teaching/learning resource together and build your own
 
 1. 📝 **Collect educational resources together**:<br>Duplicate and publish this [Google Drive Spreadsheet (Template)](https://docs.google.com/spreadsheets/d/1gqRt0UxtcTNGKduQnTlV1MR3U5ByBkzCyTMkWE6wb04/edit?usp=sharing)
 
-2. 🗂 **Setup an elasticsearch index:**<br>For example via [appbase.io](https://appbase.io/), [bonsai.io](https://bonsai.io/), [stackhero.io](https://stackhero.io/), etc.
+2. 🗂 **Setup an elasticsearch index:**<br>For example via [appbase.io](https://appbase.io/), [bonsai.io](https://bonsai.io/), [stackhero.io](https://stackhero.io/), [qbox.io](https://qbox.io/), [cloud.elastic.co](https://cloud.elastic.co/) etc.
 
 
 3. 📝➡️🗂 **Send spreadsheet data to elasticsearch index**:<br>Use the OpenEducationTagger online-tool:  ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index)
@@ -95,6 +97,7 @@ Providers with easy instance setup:
 - [appbase.io](https://openwashing.org/)
 - [bonsai.io](https://openwashing.org/) (read-only-key only on paid accounts)
 - [stackhero.io](https://stackhero.io/) (no read-only-key, but they're working on it, EU-hosting)
+- qbox.io - no free account
 
 
 ### (OLD/optional: 3. Setup php sync script (heroku))
