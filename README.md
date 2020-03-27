@@ -24,7 +24,7 @@ Collect freely accessible teaching/learning resource together and build your own
 2. 🗂 **Setup an elasticsearch index**<br>For example via [appbase.io](https://appbase.io/), [bonsai.io](https://bonsai.io/), [stackhero.io](https://stackhero.io/), [qbox.io](https://qbox.io/), [cloud.elastic.co](https://cloud.elastic.co/) etc.
 
 
-3. 📝➡️🗂 **Send spreadsheet data to elasticsearch index:** ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index)<br>Just use the OpenEducationTagger online-tool ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index), no command line usage necessary, just a modern webbrowser. (For advanced users: setup a nodejs cron job on heroku.com).
+3. 📝➡️🗂 **Send spreadsheet data to elasticsearch index:** ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index)<br>Just use the OpenEducationTagger online-tool ["spreadsheet2index"](https://programmieraffe.gitlab.io/openeducationtagger-spreadsheet2index), no command line usage necessary, just a modern webbrowser. (For advanced users: [setup a nodejs cron job on heroku.com](https://gitlab.com/programmieraffe/openeducationtagger-herokuworker)).
 
 3. 🔎 **Setup a nice-looking search interface:** [Live-Demo](https://programmieraffe.gitlab.io/openeducationtagger-frontend/index.html)<br>Fork [this](https://gitlab.com/programmieraffe/openeducationtagger-frontend)  gitlab.com-repository, add some config values via web browser and generate a nice and friendly powered by reactive-search. (Currently work-in-progress)
 
@@ -33,6 +33,7 @@ Collect freely accessible teaching/learning resource together and build your own
 
 - [https://gitlab.com/programmieraffe/openeducationtagger-spreadsheet2index](https://gitlab.com/programmieraffe/openeducationtagger-spreadsheet2index)
 - [https://gitlab.com/programmieraffe/openeducationtagger-frontend](https://gitlab.com/programmieraffe/openeducationtagger-frontend)
+- Advanced: [https://gitlab.com/programmieraffe/openeducationtagger-herokuworker](https://gitlab.com/programmieraffe/openeducationtagger-herokuworker)
 
 ### Inspired by
 
