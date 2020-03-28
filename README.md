@@ -5,7 +5,7 @@ See also:
 
 - 👉 current project from german hackathon: ["DigiCampus"](https://twitter.com/FloRa_Education/status/1242056840671879168)
 - 👉 Steffen Rörtgen [oerhoernchen20-docker](https://github.com/sroertgen/oerhoernchen20_docker/tree/master/docker_hoernchen)
-- 👉 professional: [https://gitlab.com/oersi](gitlab.com/oersi), [x5gon](https://www.x5gon.org/), [oasis.geneseo.edu/](https://oasis.geneseo.edu/)
+- 👉 professional: [https://gitlab.com/oersi](gitlab.com/oersi), [SkoHub](https://skohub.io/) [x5gon](https://www.x5gon.org/), [oasis.geneseo.edu/](https://oasis.geneseo.edu/)
 - 👉 upcoming: Social network approach with federated instances  [moodle.net/](https://moodle.net/) 💛
 
 
@@ -42,3 +42,8 @@ Infos and Demo:
 - Gitlab.com CI
 - Logo/Favicon: Emoji designed by [OpenMoji](https://openmoji.org/) – the open-source emoji and icon project. License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/#)
 - Tutorials and open source source codes provided by people from all over the world <3
+
+### Helpful tools
+
+- [https://dejavu.appbase.io/](https://dejavu.appbase.io/)
+- [https://importer.appbase.io/](https://importer.appbase.io/)
