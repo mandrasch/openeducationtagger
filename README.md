@@ -20,6 +20,12 @@ Collect freely accessible teaching/learning resource together and build your own
 
 -
 
+### Architecture
+
+![oet infrastructure](infrastructure.png)
+
+Image source: [https://kurzelinks.de/ubfb](https://kurzelinks.de/ubfb)
+
 ### Related repositories
 
 - [gitlab.com/programmieraffe/openeducationtagger-config](https://gitlab.com/programmieraffe/openeducationtagger-config)
