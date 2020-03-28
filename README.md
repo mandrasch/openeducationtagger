@@ -15,10 +15,10 @@ Collect freely accessible teaching/learning resource together and build your own
 
 ## Infos, setup guide and demo:
 
-Early version:
 
 👉 **[programmieraffe.gitlab.io/openeducationtagger-config/](https://programmieraffe.gitlab.io/openeducationtagger-config/)**
 
+-
 
 ### Related repositories
 
@@ -41,7 +41,6 @@ Early version:
 ### Helpful tools
 
 - [https://dejavu.appbase.io/](https://dejavu.appbase.io/)
-- [https://importer.appbase.io/](https://importer.appbase.io/)
 
 ## See also:
 
