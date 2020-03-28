@@ -15,10 +15,12 @@ Collect freely accessible teaching/learning resource together and build your own
 
 ## Infos, setup guide and demo:
 
+Early version:
+
 👉 **[programmieraffe.gitlab.io/openeducationtagger-config/](https://programmieraffe.gitlab.io/openeducationtagger-config/)**
 
 
-## Related repositories
+### Related repositories
 
 - [gitlab.com/programmieraffe/openeducationtagger-config](https://gitlab.com/programmieraffe/openeducationtagger-config)
 - [gitlab.com/programmieraffe/openeducationtagger-search](https://gitlab.com/programmieraffe/openeducationtagger-search)
