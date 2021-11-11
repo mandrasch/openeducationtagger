@@ -1,5 +1,7 @@
 # OpenEducationTagger 👩‍💻🔎
 
+Not maintained anymore. 
+
 **Build your own little educational search engine**
 
 ### Open 👉 [web tool (v.0.9)](https://programmieraffe.gitlab.io/openeducationtagger/)
